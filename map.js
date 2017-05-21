@@ -32,8 +32,17 @@ function placeMarkerAndPanTo(latLng, map) {
     position: latLng,
     map: map
   });
+
+  // 吹き出しの追加
+  infoWindow = new google.maps.InfoWindow({ 
+    content: '<div class="sample">TEST</div>'
+  });
+  marker.addListener('click', function() {
+    infoWindow.open(map, marker);
+  });
+
   markerList.push(marker);
   
   // クリックした位置に中心を移動
-  map.panTo(latLng);
+  //map.panTo(latLng);
 }
