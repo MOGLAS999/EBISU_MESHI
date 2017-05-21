@@ -6,8 +6,13 @@
   </head>
   <body>
     <p>地図です。</p>
+    <form id="form" onsubmit="return false;">
+      <input type="text" placeholder="住所・地名を入力してください" id="address" size="40">
+      <input type="submit" value="地図検索" id="button">
+    </form>
+    <button id="initPos">初期位置に戻る</button>
 
-    <div id="map" style="width:620px; height:400px"></div>
+    <div id="map" style="width:800px; height:600px"></div>
 
     <script type="text/javascript" src="map.js">
     </script>
